@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Save from "../src/components/Save";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import SidePanel from "./components/SidePanel";
@@ -35,7 +34,6 @@ export default function App() {
   }, [myLang]);
 
   function outputArticle(art) {
-    console.log(art);
     setCurrArt(art);
   }
 

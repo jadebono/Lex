@@ -4,7 +4,8 @@ import { nanoid } from "nanoid";
 
 export default function Boxes(props) {
   const artNums = props.art.map((item) => props.art.indexOf(item) + 1);
-  const [btns, setBtns] = useState(generateAllNewBts());
+  const [btns, setBtns] = useState(generateAllNewBtns());
+  //   const [subBtns, setSubBtns] = useState([]);
 
   useEffect(() => {
     btns.forEach((btn) => {
@@ -12,7 +13,7 @@ export default function Boxes(props) {
     });
   }, [btns, props]);
 
-  function generateAllNewBts() {
+  function generateAllNewBtns() {
     let newBtns = [];
     for (let i = 0; i < artNums.length; i++) {
       newBtns.push(generateNewBtn(i + 1));
